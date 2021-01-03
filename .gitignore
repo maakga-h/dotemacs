@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/elisp,emacs
-# Edit at https://www.gitignore.io/?templates=elisp,emacs
+# Created by https://www.toptal.com/developers/gitignore/api/emacs,elisp
+# Edit at https://www.toptal.com/developers/gitignore?templates=emacs,elisp
 
 ### Elisp ###
 # Compiled
@@ -63,15 +63,17 @@ flycheck_*.el
 # network security
 /network-security.data
 
-# recentf list
-/recentf
 
-# smex
-/smex-items
+# End of https://www.toptal.com/developers/gitignore/api/emacs,elisp
 
-# magit transient
-/transient
+# custom file
+custom.el
 
+# transient folder
+/transient/
+
+# recentf file
+recentf
+
+# lsp-mode session
 .lsp-session-v1
-
-# End of https://www.gitignore.io/api/elisp,emacs
