@@ -22,4 +22,5 @@
 (require 'init-misc)
 (require 'init-lsp)
 (require 'init-help)
+(require 'init-utils)
 
