@@ -79,4 +79,7 @@ recentf
 .lsp-session-v1
 
 # url cache youdao-dictionary
-/url
+/url/
+# tldr
+/tldr/
+/request/
