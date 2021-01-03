@@ -77,3 +77,6 @@ recentf
 
 # lsp-mode session
 .lsp-session-v1
+
+# url cache youdao-dictionary
+/url
