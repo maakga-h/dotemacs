@@ -1,4 +1,4 @@
-(if (boundp my/lsp)
+(if (boundp 'my/lsp)
     (pcase my/lsp
       ('lsp-mode (require 'init-lsp-lsp-mode))
       ('eglot (require 'init-lsp-eglot))
