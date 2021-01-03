@@ -2,11 +2,17 @@
 (setq lsp-keymap-prefix "s-l")
 
 (use-package lsp-mode
-    :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-            (erlang-mode . lsp)
-            ;; if you want which-key integration
-            (lsp-mode . lsp-enable-which-key-integration))
-    :commands lsp
+  :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+	 ;;(erlang-mode . lsp-deferred)
+	 (prog-mode . (lambda()
+			(unless (derived-mode-p 'emacs-lisp-mode 'lisp-mode)
+			  (lsp-deferred)
+			  )
+			)
+		    )
+         ;; if you want which-key integration
+         (lsp-mode . lsp-enable-which-key-integration))
+    :commands (lsp lsp-deferred)
     :config
     (setq read-process-output-max (* 1024 1024)) ;; 1mb
     )
