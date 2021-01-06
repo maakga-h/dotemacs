@@ -7,6 +7,19 @@
 
 
 (use-package tldr)
-  
+
+(use-package keyfreq
+  :init
+  (keyfreq-mode t)
+  (keyfreq-autosave-mode t)
+  :config
+  (setq keyfreq-excluded-commands
+	'(self-insert-command
+          forward-char
+          backward-char
+          previous-line
+          next-line)
+	)
+  )
 
 (provide 'init-utils)
