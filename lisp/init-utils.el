@@ -22,4 +22,6 @@
 	)
   )
 
+(use-package undo-tree)
+
 (provide 'init-utils)
