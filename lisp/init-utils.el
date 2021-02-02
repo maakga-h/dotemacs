@@ -24,4 +24,9 @@
 
 (use-package undo-tree)
 
+(use-package nov
+  :hook (nov-mode . (lambda () (display-line-numbers-mode -1)))
+  )
+(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+
 (provide 'init-utils)
