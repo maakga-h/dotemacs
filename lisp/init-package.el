@@ -55,6 +55,8 @@
 (setq shiftless-interval (if (boundp 'my/shiftless-interval) my/shiftless-interval 0.8))
 (shiftless-mode t)
 
+(el-get-bundle Fuco1/justify-kp :features justify-kp)
+
 (el-get 'sync)
 
 (provide 'init-package)
