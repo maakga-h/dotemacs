@@ -37,4 +37,24 @@
 (use-package diminish)
 (use-package delight)
 
+
+;; el-get
+(add-to-list 'load-path (expand-file-name "el-get/el-get" user-emacs-directory))
+(unless (require 'el-get nil 'noerror)
+  ;; todo must succ
+  (use-package el-get)
+  )
+
+(add-to-list 'el-get-recipe-path (expand-file-name "el-get-user/recipes" user-emacs-directory))
+
+(el-get-bundle DogLooksGood/shiftless.el
+  :features shiftless
+  )
+
+(setq shiftless-delay (if (boundp 'my/shiftless-delay) my/shiftless-delay 0.5))
+(setq shiftless-interval (if (boundp 'my/shiftless-interval) my/shiftless-interval 0.8))
+(shiftless-mode t)
+
+(el-get 'sync)
+
 (provide 'init-package)
