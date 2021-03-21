@@ -12,6 +12,7 @@
 (require 'init-package)
 (require 'init-lisp) ;; 这个前一点 配置括号容易看漏
 (require 'init-erlang)
+(require 'init-go)
 (require 'init-win)
 (require 'init-keybinds)
 (require 'init-ui)
