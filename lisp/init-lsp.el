@@ -1,3 +1,9 @@
+;;; code:
+(defun ignore-lsp-mode-p ()
+  "is mode ignore lsp mode"
+  (derived-mode-p 'emacs-lisp-mode 'lisp-mode 'lua-mode)
+  )
+
 (if (boundp 'my/lsp)
     (pcase my/lsp
       ('lsp-mode (require 'init-lsp-lsp-mode))

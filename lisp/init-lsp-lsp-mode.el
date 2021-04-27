@@ -5,7 +5,7 @@
   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
 	 ;;(erlang-mode . lsp-deferred)
 	 (prog-mode . (lambda()
-			(unless (derived-mode-p 'emacs-lisp-mode 'lisp-mode)
+			(unless (ignore-lsp-mode-p)
 			  (lsp-deferred)
 			  )
 			)

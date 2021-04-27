@@ -22,6 +22,9 @@
 (require 'init-checker)
 (require 'init-misc)
 (require 'init-lsp)
+(require 'init-leetcode)
+(require 'init-org)
 (require 'init-help)
+(require 'init-lua)
 (require 'init-utils)
 

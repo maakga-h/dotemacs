@@ -1,6 +1,6 @@
 (use-package eglot
   :hook (prog-mode . (lambda ()
-		       (unless (derived-mode-p 'emacs-lisp-mode 'lisp-mode)
+		       (unless (ignore-lsp-mode-p)
 		         (eglot-ensure)
 			 )
 		       ))
