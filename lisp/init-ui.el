@@ -8,6 +8,7 @@
   (setq display-line-numbers-type 'relative)
   (global-display-line-numbers-mode t)   
   (tool-bar-mode -1)    ;; 关闭工具栏
+  (menu-bar-mode -1)    ;; 关闭菜单栏
   (if (boundp 'scroll-bar-mode) (scroll-bar-mode -1))    ;; 关闭文件滑动控件
   ;; 高亮当前行
   (global-hl-line-mode t)
@@ -15,7 +16,7 @@
   ;; https://www.emacswiki.org/emacs/FullScreen
   (if *is-windows* (toggle-frame-maximized))
   ;;光标
-  ;;(setq-default cursor-type 'bar) 
+  (setq-default cursor-type 'box) 
   )
 
 ;;(use-package gruvbox-theme
@@ -44,7 +45,7 @@
 (use-package monokai-theme
 ;;  :init
   ;;  (load-theme 'monokai t)
-  :defer nil
+  ;;:defer nil
   :config
   (setq ;; foreground and background
       monokai-foreground     "#ABB2BF"
@@ -70,7 +71,13 @@
       monokai-height-plus-2 1.15
       monokai-height-plus-3 1.2
       monokai-height-plus-4 1.3)
-  (load-theme 'monokai t)  
+  ;;(load-theme 'monokai t)  
+  )
+
+(use-package challenger-deep-theme)
+(use-package srcery-theme
+  :init
+  (load-theme 'srcery t)
   )
 
 ;;(use-package smart-mode-line
