@@ -26,5 +26,7 @@
 (require 'init-org)
 (require 'init-help)
 (require 'init-lua)
-(require 'init-utils)
+;;(require 'init-yasnippet)
+(require 'init-search-tools) 
+(require 'init-utils) 
 

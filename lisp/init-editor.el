@@ -52,4 +52,25 @@
   (setq hungry-delete-join-reluctantly t)
   )
 
+;; 阅读源码是不给编辑
+;; todo 
+;; https://www.emacswiki.org/emacs/DirectoryVariables
+;; https://emacs.stackexchange.com/questions/3676/how-to-enter-view-only-mode-when-browsing-emacs-source-code-from-help
+(dir-locals-set-class-variables
+ 'emacs-src
+ '((nil . ((buffer-read-only . t)
+           ;;(show-trailing-whitespace . nil)
+           ;;(tab-width . 8)
+           ;;(eval . (whitespace-mode -1))
+	   )
+	)
+   )
+ )
+(dir-locals-set-directory-class "/opt/emacs/share/emacs" 'emacs-src)
+(dir-locals-set-directory-class package-user-dir 'emacs-src)
+(dir-locals-set-directory-class source-directory 'emacs-src)
+;;(dir-locals-set-directory-class find-function-C-source-directory 'emacs-src)
+
 (provide 'init-editor)
+;;; init-editor.el ends here
+

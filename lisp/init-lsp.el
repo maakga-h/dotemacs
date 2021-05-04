@@ -1,7 +1,7 @@
 ;;; code:
 (defun ignore-lsp-mode-p ()
   "is mode ignore lsp mode"
-  (derived-mode-p 'emacs-lisp-mode 'lisp-mode 'lua-mode)
+  (derived-mode-p 'emacs-lisp-mode 'lisp-mode 'lua-mode 'sh-mode)
   )
 
 (if (boundp 'my/lsp)
