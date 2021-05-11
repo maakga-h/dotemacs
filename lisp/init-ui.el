@@ -6,7 +6,7 @@
   :config
   (setq inhibit-splash-screen t)  ;; 关闭欢迎界面
   (setq display-line-numbers-type 'relative)
-  (global-display-line-numbers-mode t)   
+  (global-display-line-numbers-mode t)
   (tool-bar-mode -1)    ;; 关闭工具栏
   (menu-bar-mode -1)    ;; 关闭菜单栏
   (if (boundp 'scroll-bar-mode) (scroll-bar-mode -1))    ;; 关闭文件滑动控件
@@ -16,12 +16,12 @@
   ;; https://www.emacswiki.org/emacs/FullScreen
   (if *is-windows* (toggle-frame-maximized))
   ;;光标
-  (setq-default cursor-type 'box) 
+  (setq-default cursor-type 'box)
   )
 
 ;;(use-package gruvbox-theme
 ;;  :init (load-theme 'gruvbox-dark-soft t))
-;; (use-package doom-themes		
+;; (use-package doom-themes
 ;;   :init
 ;;   (load-theme 'doom-molokai t)
 ;;   :config
@@ -71,7 +71,7 @@
       monokai-height-plus-2 1.15
       monokai-height-plus-3 1.2
       monokai-height-plus-4 1.3)
-  ;;(load-theme 'monokai t)  
+  ;;(load-theme 'monokai t)
   )
 
 (use-package challenger-deep-theme)
