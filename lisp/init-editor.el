@@ -7,6 +7,8 @@
   (if (> (length recentf-list) 0)
       (recentf-open-files)
     )
+  (customize-set-variable 'tab-width 4)
+  (customize-set-variable 'indent-tabs-mode nil)
   )
 
 ;; Settings for C-a behavior
@@ -56,19 +58,19 @@
 ;; todo 
 ;; https://www.emacswiki.org/emacs/DirectoryVariables
 ;; https://emacs.stackexchange.com/questions/3676/how-to-enter-view-only-mode-when-browsing-emacs-source-code-from-help
-(dir-locals-set-class-variables
- 'emacs-src
- '((nil . ((buffer-read-only . t)
-           ;;(show-trailing-whitespace . nil)
-           ;;(tab-width . 8)
-           ;;(eval . (whitespace-mode -1))
-	   )
-	)
-   )
- )
-(dir-locals-set-directory-class "/opt/emacs/share/emacs" 'emacs-src)
-(dir-locals-set-directory-class package-user-dir 'emacs-src)
-(dir-locals-set-directory-class source-directory 'emacs-src)
+;; (dir-locals-set-class-variables
+;;  'emacs-src
+;;  '((nil . ((buffer-read-only . t)
+;;            ;;(show-trailing-whitespace . nil)
+;;            ;;(tab-width . 8)
+;;            ;;(eval . (whitespace-mode -1))
+;; 	   )
+;; 	)
+;;    )
+;;  )
+;; (dir-locals-set-directory-class "/opt/emacs/share/emacs" 'emacs-src)
+;; (dir-locals-set-directory-class package-user-dir 'emacs-src)
+;; (dir-locals-set-directory-class source-directory 'emacs-src)
 ;;(dir-locals-set-directory-class find-function-C-source-directory 'emacs-src)
 
 (provide 'init-editor)
