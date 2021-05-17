@@ -92,5 +92,12 @@
   (popwin-mode t)
   )
 
+;; 彩虹猫。。。
+(use-package nyan-mode
+  :init
+  (nyan-mode)
+  (nyan-start-animation)
+  )
+
 (provide 'init-ui)
 ;;; init-ui.el ends here
