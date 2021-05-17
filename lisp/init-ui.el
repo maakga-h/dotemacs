@@ -16,7 +16,7 @@
   ;; https://www.emacswiki.org/emacs/FullScreen
   (if *is-windows* (toggle-frame-maximized))
   ;;光标
-  (setq-default cursor-type 'box)
+  (setq-default cursor-type 'bar)
   )
 
 ;;(use-package gruvbox-theme

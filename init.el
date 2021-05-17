@@ -28,5 +28,10 @@
 (require 'init-lua)
 ;;(require 'init-yasnippet)
 (require 'init-search-tools) 
-(require 'init-utils) 
+(require 'init-utils)
+
+;;(set-frame-font '-outline-Consolas-bold-normal-normal-mono-17-*-*-*-c-*-fontset-auto2)
+(set-frame-font "-outline-Consolas-bold-normal-normal-mono-17-*-*-*-c-*-iso10646-1")
+(set-face-attribute 'default nil :height 130)
+
 

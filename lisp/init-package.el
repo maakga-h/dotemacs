@@ -36,7 +36,8 @@
 (use-package gnu-elpa-keyring-update)
 (use-package diminish)
 (use-package delight)
-
+(use-package dash)
+(use-package dash-functional)
 
 ;; el-get
 (add-to-list 'load-path (expand-file-name "el-get/el-get" user-emacs-directory))

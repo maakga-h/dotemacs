@@ -9,6 +9,8 @@
     )
   (customize-set-variable 'tab-width 4)
   (customize-set-variable 'indent-tabs-mode nil)
+  :bind
+  ("C-2" . set-mark-command)
   )
 
 ;; Settings for C-a behavior

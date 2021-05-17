@@ -38,13 +38,16 @@
   :bind (("M-x" . counsel-M-x) 
          ("C-x C-f" . counsel-find-file) 
          ("C-c f" . counsel-recentf)
-         ("C-c g" . counsel-git))
+         ("C-c g" . counsel-git)
+	 ("C-q" . counsel-rg)
+	 )
   ) 
 
 (use-package swiper 
   :after ivy 
   :bind (("C-s" . swiper) 
-         ("C-r" . swiper-isearch-backward)) 
+         ("C-r" . swiper-isearch-backward)
+         )
   :config (setq swiper-action-recenter t 
                 swiper-include-line-number-in-search t))
 
