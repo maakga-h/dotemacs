@@ -11,6 +11,8 @@
 (require 'init-gc)
 (require 'init-package)
 (require 'init-lang)
+(require 'init-ssh)
+(require 'init-sicp)
 (require 'init-lisp) ;; 这个前一点 配置括号容易看漏
 (require 'init-erlang)
 (require 'init-go)
