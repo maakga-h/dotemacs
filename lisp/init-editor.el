@@ -80,7 +80,9 @@
 
 
 (use-package avy
-  :bind (("C-;" . avy-goto-char-timer) )
+  :bind (("C-;" . avy-goto-char-timer)
+         ("M-g M-g" . avy-goto-line)
+         )
   )
 
 (use-package browse-kill-ring
