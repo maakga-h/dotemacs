@@ -75,6 +75,32 @@
 ;; (dir-locals-set-directory-class source-directory 'emacs-src)
 ;;(dir-locals-set-directory-class find-function-C-source-directory 'emacs-src)
 
+
+(use-package emacs
+  :bind (("C-." . set-mark-command) )
+  )
+
+
+(use-package avy
+  :bind (("C-;" . avy-goto-char-timer)
+         ("M-g M-g" . avy-goto-line)
+         )
+  )
+
+(use-package browse-kill-ring
+  :bind (:map browse-kill-ring-mode-map
+              ("C-g" . browse-kill-ring-quit)
+              ("M-n" . browse-kill-ring-forward)
+              ("M-p" . browse-kill-ring-previous)
+              )
+  )
+;; (with-eval-after-load 'browse-kill-ring
+;;   (define-key browse-kill-ring-mode-map (kbd "C-g") 'browse-kill-ring-quit)
+;;   (define-key browse-kill-ring-mode-map (kbd "M-n") 'browse-kill-ring-forward)
+;;   (define-key browse-kill-ring-mode-map (kbd "M-p") 'browse-kill-ring-previous))
+
+(use-package pretty-mode)
+
 (provide 'init-editor)
 ;;; init-editor.el ends here
 
