@@ -9,8 +9,6 @@
     )
   (customize-set-variable 'tab-width 4)
   (customize-set-variable 'indent-tabs-mode nil)
-  :bind
-  ("C-2" . set-mark-command)
   )
 
 ;; Settings for C-a behavior
@@ -77,7 +75,7 @@
 
 
 (use-package emacs
-  :bind (("C-." . set-mark-command) )
+  :bind (("C-2" . set-mark-command) )
   )
 
 
@@ -100,6 +98,10 @@
 ;;   (define-key browse-kill-ring-mode-map (kbd "M-p") 'browse-kill-ring-previous))
 
 (use-package pretty-mode)
+
+;;(set-frame-font '-outline-Consolas-bold-normal-normal-mono-17-*-*-*-c-*-fontset-auto2)
+(set-frame-font "-outline-Consolas-bold-normal-normal-mono-17-*-*-*-c-*-iso10646-1")
+(set-face-attribute 'default nil :height 130)
 
 (provide 'init-editor)
 ;;; init-editor.el ends here
