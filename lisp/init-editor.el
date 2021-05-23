@@ -103,6 +103,14 @@
 (set-frame-font "-outline-Consolas-bold-normal-normal-mono-17-*-*-*-c-*-iso10646-1")
 (set-face-attribute 'default nil :height 130)
 
+;; Nicer naming of buffers for files with identical names
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'reverse)
+(setq uniquify-separator " • ")
+(setq uniquify-after-kill-buffer-p t)
+(setq uniquify-ignore-buffers-re "^\\*")
+
+(auto-revert-mode t)
+
 (provide 'init-editor)
 ;;; init-editor.el ends here
-

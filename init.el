@@ -1,3 +1,6 @@
+;;; package --- Summary
+;;; Commentary:
+;;; Code:
 (setq load-lisp-dir (expand-file-name "lisp" user-emacs-directory))
 
 (add-to-list 'load-path load-lisp-dir)
