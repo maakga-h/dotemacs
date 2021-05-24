@@ -78,6 +78,10 @@
   :bind (("C-2" . set-mark-command) )
   )
 
+(use-package autorevert
+  :hook (after-init . global-auto-revert-mode)
+  )
+
 
 (use-package avy
   :bind (("C-;" . avy-goto-char-timer)
@@ -110,7 +114,16 @@
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
 
-(auto-revert-mode t)
+(use-package symbol-overlay
+  :delight
+  :hook (prog-mode . symbol-overlay-mode)
+  :bind (:map symbol-overlay-mode
+              ("M-i" . symbol-overlay-put)
+              ("M-I" . symbol-overlay-remove-all)
+              ("M-n" . symbol-overlay-jump-next)
+              ("M-p" . symbol-overlay-jump-prev)
+              )
+  )
 
 (provide 'init-editor)
 ;;; init-editor.el ends here
