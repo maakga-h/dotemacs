@@ -20,7 +20,8 @@
 
 (use-package ivy 
   :defer 1 
-  :demand 
+  :demand
+  :delight
   :hook (after-init . ivy-mode) 
   :config 
   (ivy-mode 1) 
