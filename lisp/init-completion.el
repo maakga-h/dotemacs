@@ -48,7 +48,7 @@
 (use-package swiper 
   :after ivy 
   :bind (("C-s" . swiper) 
-         ("C-r" . swiper-all-thing-at-point)
+         ("C-q" . swiper-all-thing-at-point)
          )
   :config (setq swiper-action-recenter t 
                 swiper-include-line-number-in-search t))
