@@ -40,14 +40,15 @@
          ("C-x C-f" . counsel-find-file) 
          ("C-c f" . counsel-recentf)
          ("C-c g" . counsel-git)
-	 ("C-q" . counsel-rg)
+		 ("C-r" . counsel-rg)
+		 ("C-x r b" . counsel-bookmark)
 	 )
   ) 
 
 (use-package swiper 
   :after ivy 
   :bind (("C-s" . swiper) 
-         ("C-r" . swiper-isearch-backward)
+         ("C-r" . swiper-all-thing-at-point)
          )
   :config (setq swiper-action-recenter t 
                 swiper-include-line-number-in-search t))
