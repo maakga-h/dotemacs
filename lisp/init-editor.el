@@ -1,14 +1,29 @@
 
 (use-package emacs
   :config
-  (defalias 'yes-or-no-p 'y-or-n-p)  
-  (require 'recentf)
+  (defalias 'yes-or-no-p 'y-or-n-p)
+  (setq inhibit-splash-screen t)  ;; 关闭欢迎界面
+
+  (tool-bar-mode -1)    ;; 关闭工具栏
+  (menu-bar-mode -1)    ;; 关闭菜单栏
+  (if (boundp 'scroll-bar-mode) (scroll-bar-mode -1))    ;; 关闭文件滑动控件
+  ;; 最大化
+  ;; https://www.emacswiki.org/emacs/FullScreen
+  (if *is-windows* (toggle-frame-maximized))
+  ;;光标
+  (setq-default cursor-type 'bar)
+  (customize-set-variable 'tab-width 4)
+  (customize-set-variable 'indent-tabs-mode nil)
+  :bind
+  (("C-2" . set-mark-command) )
+  )
+
+(use-package recentf
+  :init
   (recentf-mode t)
   (if (> (length recentf-list) 0)
       (recentf-open-files)
     )
-  (customize-set-variable 'tab-width 4)
-  (customize-set-variable 'indent-tabs-mode nil)
   )
 
 ;; Settings for C-a behavior
@@ -20,6 +35,29 @@
          ("C-c C-d" . crux-duplicate-current-line-or-region)
          ("S-k" . crux-smart-kill-line)
 	 )
+  )
+
+(use-package display-line-numbers
+  :init
+  (global-display-line-numbers-mode t)
+  (setq display-line-numbers-type 'relative)
+  )
+
+(use-package so-long
+    :hook (after-init . global-so-long-mode)
+    :config (setq so-long-threshold 400))
+
+(use-package popwin
+  :init
+  (popwin-mode t)
+  )
+
+;; 彩虹猫。。。
+(use-package nyan-mode
+  :defer 20
+  :config
+  (nyan-mode)
+  (nyan-start-animation)
   )
 
 (use-package ivy-posframe
@@ -73,11 +111,6 @@
 ;; (dir-locals-set-directory-class source-directory 'emacs-src)
 ;;(dir-locals-set-directory-class find-function-C-source-directory 'emacs-src)
 
-
-(use-package emacs
-  :bind (("C-2" . set-mark-command) )
-  )
-
 (use-package autorevert
   :hook (after-init . global-auto-revert-mode)
   )
@@ -114,16 +147,7 @@
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
 
-(use-package symbol-overlay
-  :delight
-  :hook (prog-mode . symbol-overlay-mode)
-  :bind (:map symbol-overlay-mode
-              ("M-i" . symbol-overlay-put)
-              ("M-I" . symbol-overlay-remove-all)
-              ("M-n" . symbol-overlay-jump-next)
-              ("M-p" . symbol-overlay-jump-prev)
-              )
-  )
+
 
 (provide 'init-editor)
 ;;; init-editor.el ends here

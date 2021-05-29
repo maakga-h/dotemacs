@@ -16,12 +16,11 @@
 (require 'init-lang)
 (require 'init-ssh)
 (require 'init-sicp)
-(require 'init-lisp) ;; 这个前一点 配置括号容易看漏
 (require 'init-erlang)
 (require 'init-go)
 (require 'init-win)
 (require 'init-keybinds)
-(require 'init-ui)
+;;(require 'init-ui)
 (require 'init-vcs)
 (require 'init-completion)
 (require 'init-editor)
@@ -32,7 +31,9 @@
 (require 'init-org)
 (require 'init-help)
 (require 'init-lua)
+(require 'init-theme)
 ;;(require 'init-yasnippet)
 (require 'init-search-tools)
 (require 'init-utils)
+(require 'init-highlight)
 ;;; init.el ends here
