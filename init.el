@@ -20,7 +20,6 @@
 (require 'init-go)
 (require 'init-win)
 (require 'init-keybinds)
-;;(require 'init-ui)
 (require 'init-vcs)
 (require 'init-completion)
 (require 'init-editor)
