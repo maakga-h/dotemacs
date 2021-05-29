@@ -31,7 +31,7 @@
 (require 'init-help)
 (require 'init-lua)
 (require 'init-theme)
-;;(require 'init-yasnippet)
+(require 'init-yasnippet)
 (require 'init-search-tools)
 (require 'init-utils)
 (require 'init-highlight)
