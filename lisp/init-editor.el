@@ -54,7 +54,7 @@
 
 ;; 彩虹猫。。。
 (use-package nyan-mode
-  :defer 20
+  :defer t
   :config
   (nyan-mode)
   (nyan-start-animation)
