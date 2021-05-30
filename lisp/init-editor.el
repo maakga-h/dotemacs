@@ -31,7 +31,7 @@
   :bind (("C-a" . crux-move-beginning-of-line)
          ;;("C-c ^" . crux-top-join-line)
 	 ("C-c ," . crux-find-user-init-file)
-	 ;;("C-c C-," . crux-find-user-init-file) ;; 应该是shell中C-,不能用 
+	 ;;("C-c C-," . crux-find-user-init-file) ;; 应该是shell中C-,不能用
          ("C-c C-d" . crux-duplicate-current-line-or-region)
          ("S-k" . crux-smart-kill-line)
 	 )
@@ -54,7 +54,7 @@
 
 ;; 彩虹猫。。。
 (use-package nyan-mode
-  :defer t
+  :defer 2
   :config
   (nyan-mode)
   (nyan-start-animation)
@@ -64,7 +64,7 @@
   :after (ivy)
   :config
   (ivy-posframe-mode t)
-  (setq ivy-posframe-display-functions-alist 
+  (setq ivy-posframe-display-functions-alist
     '((swiper . ivy-posframe-display-at-frame-center)
       (complete-symbol . ivy-posframe-display-at-point)
       (counsel-M-x . ivy-posframe-display-at-frame-center)
@@ -146,8 +146,6 @@
 (setq uniquify-separator " • ")
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
-
-
 
 (provide 'init-editor)
 ;;; init-editor.el ends here

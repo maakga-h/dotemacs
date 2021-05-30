@@ -35,21 +35,46 @@
 ;;  (ivy-posframe-mode 1))) 
 
 (use-package counsel 
-  :after (ivy) 
+  :after (ivy)
+  :config
+  (defun my/counsel-rg-with-ivy-thing-at-point ()
+  "`counsel-rg' with `ivy-thing-at-point'."
+  (interactive)
+  (let ((thing (ivy-thing-at-point)))
+    (when (use-region-p)
+      (deactivate-mark))
+    (counsel-rg (regexp-quote thing))))
+
+  (defun ivy-with-thing-at-point (cmd)
+      (let ((ivy-initial-inputs-alist
+             (list
+              (cons cmd (thing-at-point 'symbol)))))
+        (funcall cmd)))
+   ;; Example 1
+    (defun counsel-ag-thing-at-point ()
+      (interactive)
+      (ivy-with-thing-at-point 'counsel-rg))
+  
   :bind (("M-x" . counsel-M-x) 
          ("C-x C-f" . counsel-find-file) 
          ("C-c f" . counsel-recentf)
          ("C-c g" . counsel-git)
-	 ("C-q" . counsel-rg)
+         ("C-r" . counsel-rg)
+         ("C-q" . my/counsel-rg-with-ivy-thing-at-point)
+
+         ("C-q" . counsel-ag-thing-at-point)
+	     ("M-y" . counsel-yank-pop)
 	 )
-  ) 
+  )
 
 (use-package swiper 
   :after ivy 
   :bind (("C-s" . swiper) 
-         ("C-r" . swiper-isearch-backward)
+         ;;("C-r" . swiper-isearch-backward)
          )
   :config (setq swiper-action-recenter t 
                 swiper-include-line-number-in-search t))
+
+(use-package dumb-jump)
 
 (provide 'init-completion)
