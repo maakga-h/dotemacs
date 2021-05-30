@@ -64,12 +64,13 @@
 
          ("C-q" . counsel-ag-thing-at-point)
 	     ("M-y" . counsel-yank-pop)
+         ("C-x r b" . counsel-bookmark)
 	 )
   )
 
 (use-package swiper 
   :after ivy 
-  :bind (("C-s" . swiper) 
+  :bind (("C-s" . swiper)
          ;;("C-r" . swiper-isearch-backward)
          )
   :config (setq swiper-action-recenter t 
