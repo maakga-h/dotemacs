@@ -76,6 +76,19 @@
   :config (setq swiper-action-recenter t 
                 swiper-include-line-number-in-search t))
 
-(use-package dumb-jump)
+;;; xref use ivy
+(use-package ivy-xref
+    :init
+    (when (boundp 'xref-show-definitions-function)
+      (setq xref-show-definitions-function #'ivy-xref-show-defs))
+    (setq xref-show-xrefs-function #'ivy-xref-show-xrefs)
+    )
+
+(use-package dumb-jump
+  ;; :init
+  ;; (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+  ;; (setq dumb-jump-prefer-searcher 'rg
+  ;;       dumb-jump-selector 'ivy)
+  )
 
 (provide 'init-completion)
