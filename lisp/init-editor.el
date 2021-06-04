@@ -13,7 +13,7 @@
   ;;光标
   (setq-default cursor-type 'bar)
   (customize-set-variable 'tab-width 4)
-  (customize-set-variable 'indent-tabs-mode nil)
+  ;;(customize-set-variable 'indent-tabs-mode nil)
   :bind
   (("C-2" . set-mark-command) )
   )

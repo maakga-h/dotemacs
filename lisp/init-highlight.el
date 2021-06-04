@@ -30,7 +30,7 @@
   )
 
 (use-package diff-hl
-  :hook (after-init . global-diff-hl-mode)
+;;  :hook (after-init . global-diff-hl-mode)
   )
 
 (use-package paren
