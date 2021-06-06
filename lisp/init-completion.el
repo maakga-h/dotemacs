@@ -78,11 +78,13 @@
 
 ;;; xref use ivy
 (use-package ivy-xref
-    :init
-    (when (boundp 'xref-show-definitions-function)
-      (setq xref-show-definitions-function #'ivy-xref-show-defs))
-    (setq xref-show-xrefs-function #'ivy-xref-show-xrefs)
-    )
+  :after xref
+  :init
+  (when (boundp 'xref-show-definitions-function)
+    (setq xref-show-definitions-function #'ivy-xref-show-defs))
+  (setq xref-show-xrefs-function #'ivy-xref-show-xrefs)
+  (setq ivy-xref-use-file-path t)
+  )
 
 (use-package dumb-jump
   ;; :init
