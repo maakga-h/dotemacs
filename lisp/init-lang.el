@@ -4,7 +4,7 @@
 ;; ;;;windows system
 ;; ;;fuck notify you for settning https://github.com/sriramkswamy/ryo-emacs/blob/master/init.el
 ;; (setq coding-system-for-read 'utf-8)										  	; use utf-8 by default for reading
- (setq coding-system-for-write 'utf-8) ;; 保存文件用utf8
+ (setq coding-system-for-write 'utf-8-unix) ;; 保存文件用utf8
 ;; (set-language-environment 'utf-8)
 ;; (set-terminal-coding-system 'utf-8)
 ;; (setq-default pathname-coding-system 'utf-8)
