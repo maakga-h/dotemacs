@@ -52,6 +52,7 @@
   (popwin-mode t)
   )
 
+(if (display-graphic-p)
 ;; 彩虹猫。。。
 (use-package nyan-mode
   :defer 2
@@ -59,6 +60,7 @@
   (nyan-mode)
   (nyan-start-animation)
   )
+)
 
 (use-package ivy-posframe
   :after (ivy)
