@@ -52,9 +52,9 @@
   :features shiftless
   )
 
-(setq shiftless-delay (if (boundp 'my/shiftless-delay) my/shiftless-delay 0.5))
-(setq shiftless-interval (if (boundp 'my/shiftless-interval) my/shiftless-interval 0.8))
-(shiftless-mode t)
+;; (setq shiftless-delay (if (boundp 'my/shiftless-delay) my/shiftless-delay 0.5))
+;; (setq shiftless-interval (if (boundp 'my/shiftless-interval) my/shiftless-interval 0.8))
+;; (shiftless-mode t)
 
 (el-get-bundle Fuco1/justify-kp :features justify-kp)
 
