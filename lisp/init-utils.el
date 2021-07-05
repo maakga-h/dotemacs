@@ -5,8 +5,9 @@
   ;;(push "*Youdao Dictionary*" popwin:special-display-config)  
   )
 
-
-(use-package tldr)
+(if (not *is-windows*)
+	(use-package tldr)
+  )
 
 (use-package keyfreq
   :init
