@@ -1,6 +1,10 @@
 ;;; package --- Summary
 ;;; Commentary:
 ;;; Code:
+
+(when (version< emacs-version "27.1")
+  (error "This requires Emacs 27.1 and above!"))
+
 (setq load-lisp-dir (expand-file-name "lisp" user-emacs-directory))
 
 (add-to-list 'load-path load-lisp-dir)
