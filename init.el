@@ -35,4 +35,5 @@
 (require 'init-search-tools)
 (require 'init-utils)
 (require 'init-highlight)
+(require 'init-draw)
 ;;; init.el ends here
