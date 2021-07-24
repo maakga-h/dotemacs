@@ -1,3 +1,5 @@
+(use-package restart-emacs)
+
 (use-package youdao-dictionary
   :bind (("C-c y" . youdao-dictionary-search-at-point))
   :config

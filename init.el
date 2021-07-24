@@ -12,6 +12,7 @@
 
 (require 'init-consts)
 (require 'init-gc)
+(require 'init-misc)
 (require 'init-package)
 (require 'init-lang)
 (require 'init-ssh)
@@ -24,7 +25,6 @@
 (require 'init-completion)
 (require 'init-editor)
 (require 'init-checker)
-(require 'init-misc)
 (require 'init-lsp)
 (require 'init-leetcode)
 (require 'init-org)
