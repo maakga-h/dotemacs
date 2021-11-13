@@ -13,6 +13,9 @@
   ;;光标
   (setq-default cursor-type 'bar)
   (customize-set-variable 'tab-width 4)
+;;  (customize-set-variable 'c-basic-offset tab-width)
+  (defvaralias 'c-basic-offset 'tab-width)
+  (defvaralias 'cperl-indent-level 'tab-width)
   ;;(customize-set-variable 'indent-tabs-mode nil)
   :bind
   (("C-2" . set-mark-command) )
@@ -139,7 +142,7 @@
 (use-package pretty-mode)
 
 ;;(set-frame-font '-outline-Consolas-bold-normal-normal-mono-17-*-*-*-c-*-fontset-auto2)
-(set-frame-font "-outline-Consolas-bold-normal-normal-mono-17-*-*-*-c-*-iso10646-1")
+(set-frame-font "-outline-Consolas-normal-normal-normal-mono-17-*-*-*-c-*-iso10646-1")
 (set-face-attribute 'default nil :height 130)
 
 ;; Nicer naming of buffers for files with identical names
