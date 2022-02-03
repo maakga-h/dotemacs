@@ -17,4 +17,10 @@
         nil)
     ))
 
+(defun my-eshell-etags-c ()
+  "depth = 1"
+  (interactive)
+  (eshell-command "fd -d=1 \".*.[ch]$\" | etags -")
+  )
+
 (provide 'init-misc)
