@@ -23,4 +23,13 @@
   (eshell-command "fd -d=1 \".*.[ch]$\" | etags -")
   )
 
+(defun my/fix-win-pathstr (str)
+  "docstring"
+  (let
+	  ((path (replace-regexp-in-string "\\\\" "\/" str))
+	   )
+	(car (split-string path "\n" t))
+	)
+  )
+
 (provide 'init-misc)
