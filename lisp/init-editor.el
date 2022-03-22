@@ -16,7 +16,12 @@
 ;;  (customize-set-variable 'c-basic-offset tab-width)
   (defvaralias 'c-basic-offset 'tab-width)
   (defvaralias 'cperl-indent-level 'tab-width)
+;;  (setq-default electric-indent-inhibit t)
+;;  (setq-default indent-tabs-mode nil)
   ;;(customize-set-variable 'indent-tabs-mode nil)
+  (setq auto-save-visited-interval 1)
+  :hook
+  (after-init . auto-save-visited-mode)
   :bind
   (("C-2" . set-mark-command) )
   )
