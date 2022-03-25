@@ -40,4 +40,5 @@
 (require 'init-utils)
 (require 'init-highlight)
 (require 'init-draw)
+(require 'init-systemtap)
 ;;; init.el ends here
