@@ -23,4 +23,10 @@
   (eshell-command "fd -d=1 \".*.[ch]$\" | etags -")
   )
 
+(defun my-eshell-etags-lua ()
+  ""
+  (interactive)
+  (eshell-command "find . -regex \".*\\.lua\\|.*\\.[ch]\" -print | etags -")
+  )
+
 (provide 'init-misc)
