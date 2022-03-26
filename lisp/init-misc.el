@@ -39,4 +39,10 @@
   (eshell-command "find . -regex \".*\\.lua\\|.*\\.[ch]\" -print | etags -")
   )
 
+(defun my-eshell-etags-erlang ()
+  ""
+  (interactive)
+  (eshell-command "fd \".*.erl|.*.hrl\" | etags -")
+  )
+
 (provide 'init-misc)
