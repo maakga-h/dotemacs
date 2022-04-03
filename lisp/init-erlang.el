@@ -6,6 +6,12 @@
 (defvar erlang-root-dir nil
   "Erlang install dir.")
 
+(defvar erlang-tools-path nil
+  "")
+
+(defvar erlang-exec-path nil
+  "")
+
  ;; (let (
  ;; 	  (erl-home (getenv "ERLANG_HOME"))
  ;; 	  )
@@ -14,7 +20,17 @@
  ;; 	(setq erlang-root-dir (replace-regexp-in-string "\\\\" "\/" erl-home))
  ;; 	(setq exec-path (cons (concat (replace-regexp-in-string "\\\\" "\/" erl-home) "/bin") exec-path))
  ;; 	)
- ;;   )
+;;   )
+
+(when (getenv "ERLANG_TOOLS_PATH")
+  (setq erlang-root-dir (my/fix-win-pathstr (getenv "ERLANG_HOME")))
+  (setq erlang-tools-path (my/fix-win-pathstr (getenv "ERLANG_TOOLS_PATH")))
+  (setq erlang-exec-path (my/fix-win-pathstr (getenv "ERLANG_EXEC_PATH")))
+  (setq load-path (cons erlang-tools-path load-path))
+  (setq exec-path (cons erlang-exec-path exec-path))
+  )
+
+(unless erlang-tools-path
 
 (let
 	((erl-home (getenv "ERLANG_HOME"))
@@ -35,9 +51,14 @@
 	(setq bin-path (funcall foo fd-bin))
 	(setq load-path (cons tools-path load-path))
 	(setq exec-path (cons bin-path exec-path))
-	(require 'erlang-start)
+
 	)
  )
+)
+
+(when erlang-root-dir
+  	(require 'erlang-start)
+  )
 
  ;; (if (boundp 'erlang-root-dir)
  ;;     (require 'erlang-start)
