@@ -20,7 +20,9 @@
 (defun my-eshell-etags-c ()
   ""
   (interactive)
-  (eshell-command "fd \"(.*\\.[ch]\\|.*\\.cc)$\" | etags -")
+  (eshell-command "fd \"(.*\\.c|.*\\.h|.*\\.cc)\\$\" | etags - ")
+  ;;(eshell-command "fd \"(.*\\.[ch])\\$\" | etags - ")
+  ;;(eshell-command "fd \"(.*\\.[ch]\\|.*\\.cc)\\$\" | etags - ")
   )
 
 
