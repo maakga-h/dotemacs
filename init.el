@@ -20,6 +20,7 @@
 (require 'init-package)
 (require 'init-lang)
 (require 'init-ssh)
+(require 'init-vim)
 (require 'init-sicp)
 (require 'init-erlang)
 (require 'init-go)

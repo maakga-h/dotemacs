@@ -24,7 +24,7 @@
   :delight
   :hook (after-init . ivy-mode) 
   :config 
-  (ivy-mode 1) 
+  ;;(ivy-mode 1) 
   (setq ivy-use-virtual-buffers t 
         ivy-initial-inputs-alist nil 
         ivy-count-format "%d/%d " 
