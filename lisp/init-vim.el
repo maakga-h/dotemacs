@@ -3,9 +3,9 @@
 (use-package evil
   :defer 1 
   :hook (after-init . evil-mode)
-  :config
+;;  :config
   ;;(evil-mode t)
-  :custom
+  ;;:custom
   ;;(evil-search-module 'isearch)
   )
 
