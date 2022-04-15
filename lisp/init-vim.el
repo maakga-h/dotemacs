@@ -29,6 +29,7 @@
    "fr" 'counsel-recentf
 
    "gf" 'counsel-git
+   "pf" 'counsel-git
 
    "bb" 'ivy-switch-buffer
    "b/" 'switch-to-buffer-other-window
