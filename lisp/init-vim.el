@@ -11,28 +11,32 @@
   ;;(evil-search-module 'isearch)
   )
 
-(use-package general)
+(use-package general
+  :defer 1
+  :config
+  (general-define-key 
+   :states '(normal)
+   :keymaps 'override
+   :prefix "SPC"
 
-(general-define-key
- :states '(normal)
- :keymaps 'override
- :prefix "SPC"
+   "SPC" 'execute-extended-command
+   "s" 'swiper
+   "q" 'counsel-ag-thing-at-point
+   "r" 'counsel-rg
 
- "SPC" 'execute-extended-command
- "q" 'counsel-ag-thing-at-point
- "r" 'counsel-rg
+   "ff" 'counsel-find-file
+   "fF" 'find-file-other-window
+   "fr" 'counsel-recentf
 
- "ff" 'counsel-find-file
- "fF" 'find-file-other-window
- "fr" 'counsel-recentf
+   "gf" 'counsel-git
 
- "gf" 'counsel-git
+   "bb" 'ivy-switch-buffer
+   "b/" 'switch-to-buffer-other-window
+   "bk" 'kill-buffer
 
- "bb" 'ivy-switch-buffer
- "b/" 'switch-to-buffer-other-window
- "bk" 'kill-buffer
-
- "/" 'split-window-horizontally
- )
+   "/" 'split-window-horizontally
+   )
+  
+  )
 
 (provide 'init-vim)
