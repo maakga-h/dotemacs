@@ -26,6 +26,16 @@
   (("C-2" . set-mark-command) )
   )
 
+;; (use-package no-littering
+;;   :defer 1 
+;;   :config
+;;   (setq auto-save-file-name-transforms
+;; 		`((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
+;;   (require 'recentf)
+;;   (add-to-list 'recentf-exclude no-littering-var-directory)
+;;   (add-to-list 'recentf-exclude no-littering-etc-directory)
+;;   )
+
 (use-package recentf
   :init
   (recentf-mode t)
