@@ -58,6 +58,9 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
    "b/" 'switch-to-buffer-other-window
    "bk" 'kill-buffer
 
+   "c" '(:wk "comment")
+   "cc" 'comment-line
+
    "/" 'split-window-horizontally
    )
   
