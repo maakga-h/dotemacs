@@ -1,9 +1,11 @@
 
 ;;; Settings for package archives
-(setq package-archives '(("melpa" . "http://elpa.emacs-china.org/melpa/")
-                         ("gnu" . "http://elpa.emacs-china.org/gnu/")
-                         ("org" . "http://elpa.emacs-china.org/org/")
-			 ))
+;; (setq package-archives '(("melpa" . "http://elpa.emacs-china.org/melpa/")
+;;                          ("gnu" . "http://elpa.emacs-china.org/gnu/")
+;;                          ("org" . "http://elpa.emacs-china.org/org/")
+;; 			 ))
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 (require 'package)
 
