@@ -110,3 +110,6 @@ tags
 # no-littering
 /etc
 /var
+
+# pyim
+/pyim
