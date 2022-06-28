@@ -42,4 +42,5 @@
 (require 'init-highlight)
 (require 'init-draw)
 (require 'init-systemtap)
+(require 'init-pyim)
 ;;; init.el ends here
