@@ -13,4 +13,6 @@
 
 (defconst *is-cygwin* (eq system-type 'cygwin) )
 
+(defconst *is-emacs-27* (< (string-to-number emacs-version) 28))
+
 (provide 'init-consts)

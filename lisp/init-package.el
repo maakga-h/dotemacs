@@ -4,8 +4,14 @@
 ;;                          ("gnu" . "http://elpa.emacs-china.org/gnu/")
 ;;                          ("org" . "http://elpa.emacs-china.org/org/")
 ;; 			 ))
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+
+(setq package-archives '(("melpa-cn" . "http://1.15.88.122/melpa/")
+                         ("gnu-cn"   . "http://1.15.88.122/gnu/")
+                         ("org-cn"   . "http://1.15.88.122/org/")
+                         ))
+
+;;(add-to-list 'package-archives
+;;             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 (require 'package)
 
