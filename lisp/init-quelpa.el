@@ -16,14 +16,14 @@
   (quelpa-use-package-inhibit-loading-quelpa t)
   )
 
-(use-package shiftless
-  :defer 1
-  :quelpa (shiftless :fetcher github :repo "DogLooksGood/shiftless.el")
-  :config
-  (setq shiftless-delay (if (boundp 'my/shiftless-delay) my/shiftless-delay 0.5))
-  (setq shiftless-interval (if (boundp 'my/shiftless-interval) my/shiftless-interval 0.8))
-  ;;(shiftless-mode t)
-  )
+;; (use-package shiftless
+;;   :defer 1
+;;   :quelpa (shiftless :fetcher github :repo "DogLooksGood/shiftless.el")
+;;   :config
+;;   (setq shiftless-delay (if (boundp 'my/shiftless-delay) my/shiftless-delay 0.5))
+;;   (setq shiftless-interval (if (boundp 'my/shiftless-interval) my/shiftless-interval 0.8))
+;;   ;;(shiftless-mode t)
+;;   )
 
 (use-package justify-kp
   :quelpa (justify-kp :fetcher github :repo "Fuco1/justify-kp")
