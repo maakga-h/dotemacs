@@ -24,6 +24,7 @@
 (require 'init-sicp)
 (require 'init-erlang)
 (require 'init-go)
+(require 'init-typescript)
 (require 'init-win)
 (require 'init-keybinds)
 (require 'init-vcs)
