@@ -55,4 +55,19 @@
 	)
   )
 
+(defun my-refresh-svn-git ()
+  ""
+  (interactive)
+  (let ((git (dominating-file ".git"))
+		(svn (dominating-file ".svn"))
+		)
+	(and git svn
+		 (shell-command-to-string
+		  (format "cd %s && svn up " git)
+		  )
+		 (shell-command-to-string (format "cd %s && git commit -a -m \"trunk\"" git))
+		 )
+	)
+  )
+
 (provide 'init-misc)
