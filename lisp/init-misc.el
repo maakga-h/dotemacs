@@ -35,7 +35,7 @@
 (defun my--build-tags (dir)
   "do build tags in one dir"
   (eshell-command-result
-   (format "fd \".*\\.lua|.*\\.c|.*\\.h|.*\\.cc\" %s | etags -o %s/TAGS -" dir dir))
+   (format "cd %s && fd \".*\\.lua|.*\\.c|.*\\.h|.*\\.cc\" | etags -" dir ))
   )
 
 (defun my-build-tags ()
