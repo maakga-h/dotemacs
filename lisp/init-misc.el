@@ -17,15 +17,6 @@
         nil)
     ))
 
-(defun my-eshell-etags-c ()
-  ""
-  (interactive)
-  (eshell-command "fd \"(.*\\.c|.*\\.h|.*\\.cc)\\$\" | etags - ")
-  ;;(eshell-command "fd \"(.*\\.[ch])\\$\" | etags - ")
-  ;;(eshell-command "fd \"(.*\\.[ch]\\|.*\\.cc)\\$\" | etags - ")
-  )
-
-
 (defun my/fix-win-pathstr (str)
   "docstring"
   (let
@@ -35,16 +26,33 @@
 	)
   )
 
-(defun my-eshell-etags-lua ()
-  ""
-  (interactive)
-  (eshell-command "find . -regex \".*\\.lua\\|.*\\.[ch]\" -print | etags -")
+(defun dominating-file (file)
+  "find project root"
+  (expand-file-name
+   (locate-dominating-file default-directory file))
   )
 
-(defun my-eshell-etags-erlang ()
+(defun my--build-tags (dir)
+  "do build tags in one dir"
+  (eshell-command-result
+   (format "fd \".*\\.lua|.*\\.c|.*\\.h|.*\\.cc\" %s | etags -o %s/TAGS -" dir dir))
+  )
+
+(defun my-build-tags ()
   ""
   (interactive)
-  (eshell-command "fd \".*.erl|.*.hrl\" | etags -")
+  (my--build-tags (dominating-file ".git"))
+  )
+
+(defun my-rebuild-tags ()
+  ""
+  (interactive)
+  (let ((dir (dominating-file ".git")))
+	(and
+	 (file-exists-p (concat dir "TAGS"))
+	 (my--build-tags dir)
+	 )
+	)
   )
 
 (provide 'init-misc)

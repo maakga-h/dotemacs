@@ -51,9 +51,9 @@
               (cons cmd (thing-at-point 'symbol)))))
         (funcall cmd)))
    ;; Example 1
-    (defun counsel-ag-thing-at-point ()
-      (interactive)
-      (ivy-with-thing-at-point 'counsel-rg))
+  (defun counsel-ag-thing-at-point ()
+	(interactive)
+	(ivy-with-thing-at-point 'counsel-rg))
   
   :bind (("M-x" . counsel-M-x) 
          ("C-x C-f" . counsel-find-file) 
