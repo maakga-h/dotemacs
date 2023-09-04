@@ -28,8 +28,13 @@
 
 (defun dominating-file (file)
   "find project root"
-  (expand-file-name
-   (locate-dominating-file default-directory file))
+  (let ((dir (locate-dominating-file default-directory file)))
+	(and dir
+		 (expand-file-name dir)
+		 )
+	  )
+  ;; (expand-file-name
+  ;;  (locate-dominating-file default-directory file))
   )
 
 (defun my--build-tags (dir)
@@ -49,6 +54,7 @@
   (interactive)
   (let ((dir (dominating-file ".git")))
 	(and
+	 dir
 	 (file-exists-p (concat dir "TAGS"))
 	 (my--build-tags dir)
 	 )
