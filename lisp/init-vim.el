@@ -58,7 +58,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
    "gf" 'counsel-git
    ;;
    "p" '(:wk "project")
-   "pf" 'counsel-git
+   "pf" 'find-file-in-project
    ;;
    "q" 'counsel-ag-thing-at-point
    ;;

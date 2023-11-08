@@ -33,7 +33,6 @@
 	)
   )
 ;;  (ivy-posframe-mode 1))) 
-
 (use-package counsel 
   :after (ivy)
   :config
@@ -54,7 +53,17 @@
   (defun counsel-ag-thing-at-point ()
 	(interactive)
 	(ivy-with-thing-at-point 'counsel-rg))
-  
+
+  ;; (defun counsel-before-counsel--async-command (cmd &rest _)
+  ;; 	(unless (stringp cmd)
+  ;; 	  (setq cmd (string-join cmd " ")))
+  ;; 	(lv-message "Command: (@%s) %s"
+  ;; 				(propertize default-directory 'face font-lock-constant-face)
+  ;; 				(propertize cmd 'face font-lock-doc-face)))
+
+  ;; (advice-add 'counsel--async-command :before
+  ;; 			  #'counsel-before-counsel--async-command)
+
   :bind (("M-x" . counsel-M-x) 
          ("C-x C-f" . counsel-find-file) 
          ("C-c f" . counsel-recentf)
@@ -91,6 +100,13 @@
   ;; (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
   ;; (setq dumb-jump-prefer-searcher 'rg
   ;;       dumb-jump-selector 'ivy)
+  )
+
+(use-package find-file-in-project
+  :config
+  (setq ffip-use-rust-fd t)
+  (add-to-list 'ffip-prune-patterns "*/.vs")
+  (add-to-list 'ffip-project-file ".vs")
   )
 
 (provide 'init-completion)
