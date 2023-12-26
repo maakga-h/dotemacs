@@ -40,8 +40,17 @@
 (defun my--build-tags (dir)
   "do build tags in one dir"
   (eshell-command-result
-   (format "cd %s && fd \".*\\.lua|.*\\.c|.*\\.h|.*\\.cc\" | etags -" dir ))
+   ;; (format "cd %s && fd \".*\\.lua|.*\\.c|.*\\.h|.*\\.cc\" | etags -" dir ))
+   (format "cd %s && fd \".*\\.lua\\$|.*\\.c\\$|.*\\.h\\$|.*\\.cc\\$\" | etags -" dir ))
   )
+
+;; (defun my--build-tags-test ()
+;;   "do build tags in one dir"
+;;   (interactive)
+;;   (message
+;;   (eshell-command-result
+;;    (format "cd %s && fd \".*\\.h\\$\"" (dominating-file ".git"))))
+;;   )
 
 (defun my-build-tags ()
   ""
