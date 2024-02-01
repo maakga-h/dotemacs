@@ -41,7 +41,7 @@
   "do build tags in one dir"
   (eshell-command-result
    ;; (format "cd %s && fd \".*\\.lua|.*\\.c|.*\\.h|.*\\.cc\" | etags -" dir ))
-   (format "cd %s && fd \".*\\.lua\\$|.*\\.c\\$|.*\\.h\\$|.*\\.cc\\$\" | etags -" dir ))
+   (format "cd %s && fd \".*\\.lua\\$|.*\\.c\\$|.*\\.h\\$|.*\\.cc\\$|.*\\.js\\$|.*\\.ts\\$\" | etags -" dir ))
   )
 
 ;; (defun my--build-tags-test ()

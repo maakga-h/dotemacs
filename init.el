@@ -44,5 +44,6 @@
 (require 'init-draw)
 (require 'init-systemtap)
 (require 'init-input-method)
+(require 'init-web)
 ;;(require 'init-pyim)
 ;;; init.el ends here
