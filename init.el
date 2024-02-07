@@ -18,6 +18,7 @@
 (require 'init-gc)
 (require 'init-misc)
 (require 'init-package)
+(require 'init-eglot)
 (require 'init-lang)
 (require 'init-ssh)
 (require 'init-vim)
@@ -31,7 +32,7 @@
 (require 'init-completion)
 (require 'init-editor)
 (require 'init-checker)
-(require 'init-lsp)
+;; (require 'init-lsp)
 (require 'init-leetcode)
 (require 'init-org)
 (require 'init-help)
@@ -45,5 +46,6 @@
 (require 'init-systemtap)
 (require 'init-input-method)
 (require 'init-web)
+(require 'init-markdown)
 ;;(require 'init-pyim)
 ;;; init.el ends here

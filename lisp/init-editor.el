@@ -12,7 +12,8 @@
   (if *is-windows* (toggle-frame-maximized))
   ;;光标
   (setq-default cursor-type 'bar)
-  (customize-set-variable 'tab-width 4)
+  ;; (customize-set-variable 'tab-width 4)
+  (setq-default tab-width 4)
 ;;  (customize-set-variable 'c-basic-offset tab-width)
   (defvaralias 'c-basic-offset 'tab-width)
   (defvaralias 'cperl-indent-level 'tab-width)
@@ -22,6 +23,7 @@
   (setq auto-save-visited-interval 1)
   :hook
   (after-init . auto-save-visited-mode)
+  (prog-mode . prettify-symbols-mode)
   :bind
   (("C-2" . set-mark-command) )
   )
