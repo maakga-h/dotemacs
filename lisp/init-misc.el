@@ -1,3 +1,5 @@
+(use-package s)
+
 (defun my-eshell-which-cmd (cmd)
   "which cmd, return 'which' result or nil"
   (let (
@@ -37,11 +39,30 @@
   ;;  (locate-dominating-file default-directory file))
   )
 
+;;(mapconcat (lambda (x) (format ".*\\.%s\\$" x)) '(lua cc h) "|")
+(defun my--build-tags-types (files)
+  ""
+  (let ((re (mapconcat (lambda (x) (format ".*\\.%s\\$" x)) files "|"))
+		(dir (dominating-file ".git")))
+	(eshell-command-result
+	 (format "cd %s && fd %s | etags -" dir ))
+	)
+  )
+
+(defun my-build-tags-lua()
+  ""
+  (interactive)
+  (my--build-tags-types '("lua" "c" "h" "cc"))
+  )
+
+;; (defun my--build-tags-types (files)
+
 (defun my--build-tags (dir)
   "do build tags in one dir"
   (eshell-command-result
+  ;; (message
    ;; (format "cd %s && fd \".*\\.lua|.*\\.c|.*\\.h|.*\\.cc\" | etags -" dir ))
-   (format "cd %s && fd \".*\\.lua\\$|.*\\.c\\$|.*\\.h\\$|.*\\.cc\\$|.*\\.js\\$|.*\\.ts\\$|.*\\.go\\$|.*\\.vue\\$\" | etags -" dir ))
+   (format "cd %s && fd \".*\\.lua\\$|.*\\.c\\$|.*\\.h\\$|.*\\.cc\\$|.*\\.js\\$|.*\\.ts\\$|.*\\.go\\$|.*\\.vue\\$|.*\\.erl\\$|.*\\.hrl\\$\" | etags -" dir ))
   )
 
 ;; (defun my--build-tags-test ()
