@@ -17,6 +17,7 @@
   (setq erlang-root-dir my/erlang-root-dir)
   (setq exec-path (cons my/erlang-exec-path exec-path))
   (require 'erlang-start)
+  (add-to-list 'auto-mode-alist '("\\rebar.config\\'" . erlang-mode))
   )
 
  ;; (if (boundp 'my/erlang-root-dir)
