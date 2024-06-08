@@ -5,10 +5,15 @@
 ;;                          ("org" . "http://elpa.emacs-china.org/org/")
 ;; 			 ))
 
-(setq package-archives '(("melpa-cn" . "http://1.15.88.122/melpa/")
-                         ("gnu-cn"   . "http://1.15.88.122/gnu/")
-                         ("org-cn"   . "http://1.15.88.122/org/")
-                         ))
+;; (setq package-archives '(("melpa-cn" . "http://1.15.88.122/melpa/")
+;;                          ("gnu-cn"   . "http://1.15.88.122/gnu/")
+;;                          ("org-cn"   . "http://1.15.88.122/org/")
+;;                          ))
+
+(setq package-archives '(("gnu"    . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("nongnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
+                         ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+                         ("melpa"  . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 
 ;;(add-to-list 'package-archives
 ;;             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
