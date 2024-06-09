@@ -16,8 +16,8 @@
 
 (require 'init-consts)
 (require 'init-gc)
-(require 'init-misc)
 (require 'init-package)
+(require 'init-misc)
 (require 'init-eglot)
 (require 'init-lang)
 (require 'init-ssh)

@@ -12,7 +12,7 @@
 
 (setq package-archives '(("gnu"    . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
                          ("nongnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
-                         ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+                         ("org"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
                          ("melpa"  . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 
 ;;(add-to-list 'package-archives
