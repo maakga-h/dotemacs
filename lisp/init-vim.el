@@ -56,6 +56,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
    ;;
    "g" '(:wk "git")
    "gf" 'counsel-git
+   ;; help
+   "h" '(:wk "help")
+   "ha" 'apropos-command
+   "hf" 'describe-function
+   "hk" 'describe-key
+   "hv" 'describe-variable
    ;;
    "p" '(:wk "project")
    "pf" 'find-file-in-project
