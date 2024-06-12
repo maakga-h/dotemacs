@@ -159,7 +159,9 @@
 (use-package pretty-mode)
 
 ;;(set-frame-font '-outline-Consolas-bold-normal-normal-mono-17-*-*-*-c-*-fontset-auto2)
-(set-frame-font "-outline-Consolas-normal-normal-normal-mono-17-*-*-*-c-*-iso10646-1")
+(when *is-windows*
+  (set-frame-font "-outline-Consolas-normal-normal-normal-mono-17-*-*-*-c-*-iso10646-1")
+  )
 (set-face-attribute 'default nil :height 130)
 
 ;; Nicer naming of buffers for files with identical names
