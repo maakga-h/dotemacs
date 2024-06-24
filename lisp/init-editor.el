@@ -173,6 +173,7 @@
 
 (use-package editorconfig
   :ensure t
+  :defer nil
   :config
   (editorconfig-mode 1))
 
