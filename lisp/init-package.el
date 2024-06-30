@@ -53,7 +53,7 @@
 (use-package dash-functional)
 
 (when (display-graphic-p)
-  ;;(require 'init-quelpa)
+  (require 'init-quelpa)
   )
 
 (provide 'init-package)
