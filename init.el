@@ -14,6 +14,17 @@
 (when (file-exists-p custom-file)
   (load-file custom-file))
 
+(defconst *local-dir*
+  (locate-user-emacs-file ".local")
+  "my local dir")
+
+(make-directory *local-dir* :parents)
+
+(defun my/local-file (file)
+  "make local file name"
+  (expand-file-name file *local-dir*)
+  )
+
 (require 'init-consts)
 (require 'init-gc)
 (require 'init-package)

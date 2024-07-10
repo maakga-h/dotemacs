@@ -64,8 +64,10 @@
   )
 
 (use-package so-long
-    :hook (after-init . global-so-long-mode)
-    :config (setq so-long-threshold 400))
+  :ensure nil
+  :hook (after-init . global-so-long-mode)
+  :config (setq so-long-threshold 400)
+  )
 
 (use-package popwin
   :init
@@ -134,6 +136,7 @@
 ;;(dir-locals-set-directory-class find-function-C-source-directory 'emacs-src)
 
 (use-package autorevert
+  :ensure nil
   :hook (after-init . global-auto-revert-mode)
   )
 
@@ -176,6 +179,42 @@
   :defer nil
   :config
   (editorconfig-mode 1))
+
+(use-package vlf)
+
+(use-package saveplace
+  :ensure nil
+  :hook (after-init . save-place-mode)
+  :custom
+  (save-place-file (my/local-file "places"))
+  (save-place-forget-unreadable-files nil)
+  )
+
+;; https://github.com/condy0919/emacs-newbie/blob/master/introduction-to-builtin-modes.md
+(use-package whitespace
+  :ensure nil
+  :hook ((prog-mode markdown-mode conf-mode) . whitespace-mode)
+  :config
+  (setq whitespace-style '(face trailing))
+  )
+
+;; 折叠代码 例如{}里面的内容
+(use-package hideshow
+  :ensure nil
+  :diminish hs-minor-mode
+  :hook (prog-mode . hs-minor-mode)
+  :config
+  ;; 这里额外启用了 :box t 属性使得提示更加明显
+  (defconst hideshow-folded-face '((t (:inherit 'font-lock-comment-face :box t))))
+
+  (defun hideshow-folded-overlay-fn (ov)
+    (when (eq 'code (overlay-get ov 'hs))
+      (let* ((nlines (count-lines (overlay-start ov) (overlay-end ov)))
+             (info (format " ... #%d " nlines)))
+        (overlay-put ov 'display (propertize info 'face hideshow-folded-face)))))
+
+  (setq hs-set-up-overlay 'hideshow-folded-overlay-fn)
+  )
 
 (provide 'init-editor)
 ;;; init-editor.el ends here

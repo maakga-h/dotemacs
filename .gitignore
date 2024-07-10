@@ -113,3 +113,6 @@ tags
 
 # pyim
 /pyim
+
+# ignore self local files
+.local/

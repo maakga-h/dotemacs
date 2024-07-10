@@ -1,6 +1,7 @@
 
 ;; 高亮当前行
 (use-package hl-line
+  :ensure nil
   :hook ((after-init . global-hl-line-mode))
   )
 
