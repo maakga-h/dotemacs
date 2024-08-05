@@ -7,6 +7,5 @@
   :config
   (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
   )
-   
 
 (provide 'init-lsp-eglot)

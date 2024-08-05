@@ -8,7 +8,7 @@
 ;; (set-language-environment 'utf-8)
 ;; (set-terminal-coding-system 'utf-8)
 ;; (setq-default pathname-coding-system 'utf-8)
-;; (setq default-process-coding-system 
+;; (setq default-process-coding-system
 ;;             '(utf-8 . utf-8))
 ;; (set-buffer-file-coding-system 'utf-8)
 ;; (set-keyboard-coding-system 'utf-8)

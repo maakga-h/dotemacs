@@ -1,4 +1,3 @@
-
 ;; Search tools
 ;; Writable `grep' buffer
 (use-package wgrep

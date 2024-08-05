@@ -1,5 +1,4 @@
 
-
 ;; https://github.com/magit/magit/wiki/Pushing-with-Magit-from-Windows
 (use-package ssh-agency
   :if *is-windows*

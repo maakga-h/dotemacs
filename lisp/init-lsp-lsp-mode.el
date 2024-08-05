@@ -34,5 +34,4 @@
 ;;     :config
 ;;     (which-key-mode))
 
-
 (provide 'init-lsp-lsp-mode)

@@ -35,9 +35,5 @@
   (add-to-list 'auto-mode-alist '("\\rebar.config\\'" . erlang-mode))
   )
 
- ;; (if (boundp 'my/erlang-root-dir)
- ;;     (require 'erlang-start)
- ;;   )
-
 (provide 'init-erlang)
 ;;; init-erlang ends here

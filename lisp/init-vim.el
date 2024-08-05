@@ -71,10 +71,10 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
    "r" 'counsel-rg
    ;;
    "s" 'swiper
-   ;; 
+   ;;
    "/" 'split-window-horizontally
    )
-  
+
   )
 
 (provide 'init-vim)

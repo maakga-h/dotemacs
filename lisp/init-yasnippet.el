@@ -21,7 +21,6 @@
 ;;(setq yas-snippet-dirs (yas-snippet-dirs))
 
 (use-package ivy-yasnippet)
-
 ;;(use-package auto-yasnippet)
 
 (provide 'init-yasnippet)

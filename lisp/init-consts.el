@@ -1,4 +1,3 @@
-
 ;; Consts to check operating system
 (defconst *is-mac* (eq system-type 'darwin)
   "Const for system check, macOS.")

@@ -36,7 +36,7 @@
   :hook
   (nov-mode . (lambda () (display-line-numbers-mode -1)))
   (nov-mode . visual-line-mode)
-  (nov-mode . visual-fill-column-mode)  
+  (nov-mode . visual-fill-column-mode)
   :config
   (setq nov-text-width t)
   ;;  (setq visual-fill-column-center-text t)
@@ -44,6 +44,7 @@
   )
 ;;(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
 ;;(require 'justify-kp)
+
 (defun my-nov-window-configuration-change-hook ()
   (my-nov-post-html-render-hook)
   (remove-hook 'window-configuration-change-hook

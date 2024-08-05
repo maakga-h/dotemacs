@@ -1,4 +1,3 @@
-
 ;;; Settings for package archives
 ;; (setq package-archives '(("melpa" . "http://elpa.emacs-china.org/melpa/")
 ;;                          ("gnu" . "http://elpa.emacs-china.org/gnu/")
