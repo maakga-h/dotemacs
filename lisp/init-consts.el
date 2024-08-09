@@ -14,4 +14,12 @@
 
 (defconst *is-emacs-27* (< (string-to-number emacs-version) 28))
 
+(defconst *is-gui*
+  (display-graphic-p)
+  "is gui")
+
+(defconst *is-tui*
+  (not *is-gui*)
+  "is tui")
+
 (provide 'init-consts)

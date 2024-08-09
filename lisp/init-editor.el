@@ -74,13 +74,14 @@
   (popwin-mode t)
   )
 
-(if (display-graphic-p)
+(unless *is-tui*
 ;; 彩虹猫。。。
 (use-package nyan-mode
-  :defer 2
-  :config
-  (nyan-mode)
-  (nyan-start-animation)
+  :hook
+  (after-init . nyan-mode)
+  :custom
+  (nyan-wavy-trail t)
+  (nyan-animate-nyancat t)
   )
 )
 
