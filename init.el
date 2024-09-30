@@ -44,7 +44,7 @@
 (require 'init-editor)
 (require 'init-checker)
 ;; (require 'init-lsp)
-(require 'init-leetcode)
+;; (require 'init-leetcode)
 (require 'init-org)
 (require 'init-help)
 (require 'init-lua)
@@ -58,5 +58,6 @@
 (require 'init-input-method)
 (require 'init-web)
 (require 'init-markdown)
+(require 'init-diff)
 ;;(require 'init-pyim)
 ;;; init.el ends here
