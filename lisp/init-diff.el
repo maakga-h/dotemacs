@@ -14,5 +14,11 @@
 
   )
 
+(use-package ediff
+  :config
+  (customize-set-variable 'ediff-window-setup-function 'ediff-setup-windows-plain)
+  (customize-set-variable 'ediff-split-window-function 'split-window-horizontally)
+  )
+
 (provide 'init-diff)
 ;;; init-diff ends here
