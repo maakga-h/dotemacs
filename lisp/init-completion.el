@@ -29,7 +29,8 @@
         ivy-initial-inputs-alist nil 
         ivy-count-format "%d/%d " 
         enable-recursive-minibuffers t 
-        ivy-re-builders-alist '((t . ivy--regex-ignore-order))
+        ;; ivy-re-builders-alist '((t . ivy--regex-ignore-order))
+        ivy-re-builders-alist '((t . ivy--regex-plus))
 	)
   )
 ;;  (ivy-posframe-mode 1))) 
@@ -69,9 +70,9 @@
          ("C-c f" . counsel-recentf)
          ("C-c g" . counsel-git)
          ("C-r" . counsel-rg)
-         ("C-q" . my/counsel-rg-with-ivy-thing-at-point)
+         ;; ("C-q" . my/counsel-rg-with-ivy-thing-at-point)
 
-         ("C-q" . counsel-ag-thing-at-point)
+         ;; ("C-q" . counsel-ag-thing-at-point)
 	     ("M-y" . counsel-yank-pop)
          ("C-x r b" . counsel-bookmark)
 	 )
