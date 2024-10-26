@@ -37,6 +37,7 @@
 (use-package counsel 
   :after (ivy)
   :config
+  (setq counsel-async-command-delay 0.1)
   (defun my/counsel-rg-with-ivy-thing-at-point ()
   "`counsel-rg' with `ivy-thing-at-point'."
   (interactive)
