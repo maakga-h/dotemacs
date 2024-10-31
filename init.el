@@ -2,8 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
-(when (version< emacs-version "27.1")
-  (error "This requires Emacs 27.1 and above!"))
+(when (version< emacs-version "29")
+  (error "This requires Emacs 29 and above!"))
 
 (setq load-lisp-dir (expand-file-name "lisp" user-emacs-directory))
 

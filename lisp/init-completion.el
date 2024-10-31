@@ -29,8 +29,8 @@
         ivy-initial-inputs-alist nil 
         ivy-count-format "%d/%d " 
         enable-recursive-minibuffers t 
-        ;; ivy-re-builders-alist '((t . ivy--regex-ignore-order))
-        ivy-re-builders-alist '((t . ivy--regex-plus))
+        ivy-re-builders-alist '((t . ivy--regex-ignore-order))
+        ;; ivy-re-builders-alist '((t . ivy--regex-plus))
 	)
   )
 ;;  (ivy-posframe-mode 1))) 

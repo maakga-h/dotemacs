@@ -1,7 +1,8 @@
 
 (use-package emacs
   :config
-  (defalias 'yes-or-no-p 'y-or-n-p)
+  ;; (defalias 'yes-or-no-p 'y-or-n-p)
+  (setopt use-short-answers t) ;; since emacs 29
   (setq inhibit-splash-screen t)  ;; 关闭欢迎界面
 
   (tool-bar-mode -1)    ;; 关闭工具栏
