@@ -28,7 +28,7 @@
   (setq ivy-use-virtual-buffers t 
         ivy-initial-inputs-alist nil 
         ivy-count-format "%d/%d " 
-        enable-recursive-minibuffers t 
+        enable-recursive-minibuffers t
         ivy-re-builders-alist '((t . ivy--regex-ignore-order))
         ;; ivy-re-builders-alist '((t . ivy--regex-plus))
 	)
@@ -37,7 +37,8 @@
 (use-package counsel 
   :after (ivy)
   :config
-  (setq counsel-async-command-delay 0.1)
+  (setq counsel-async-command-delay 0.2)
+  ;; (setq ivy-dynamic-exhibit-delay-ms 200)
   (defun my/counsel-rg-with-ivy-thing-at-point ()
   "`counsel-rg' with `ivy-thing-at-point'."
   (interactive)
