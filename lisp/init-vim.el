@@ -59,9 +59,13 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
    ;; help
    "h" '(:wk "help")
    "ha" 'apropos-command
-   "hf" 'describe-function
-   "hk" 'describe-key
-   "hv" 'describe-variable
+   ;; "hf" 'describe-function
+   ;; "hk" 'describe-key
+   ;; "hv" 'describe-variable
+   "hf" 'helpful-callable
+   "hk" 'helpful-key
+   "hv" 'helpful-variable
+   "hp" 'helpful-at-point
    ;;
    "p" '(:wk "project")
    "pf" 'find-file-in-project
@@ -74,7 +78,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
    ;;
    "/" 'split-window-horizontally
    )
-
   )
 
 (provide 'init-vim)
