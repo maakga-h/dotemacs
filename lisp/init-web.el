@@ -4,4 +4,9 @@
   ;; :mode ("\\.html\\'" . web-mode)
   )
 
+(use-package yaml-mode
+  :mode ("\\.yaml\\'" . yaml-mode)
+  :mode ("\\.yml\\'" . yaml-mode)
+  )
+
 (provide 'init-web)
